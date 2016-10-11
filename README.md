@@ -66,6 +66,8 @@ on Apcera Platform architecture and value proposition.
 
 ### Manifest & Create a Database Service
 
+* `git clone git@github.com:tbeets/flasky-apcera-db.git`
+
 *continuum.conf* manifest:
 
     name: "flasky-apcera-db"
@@ -131,4 +133,7 @@ on Apcera Platform architecture and value proposition.
         { schedulingTag.hard host-2e51f487 }
     }
 
+* `apc logout; apc login --basic` (as user2) 
+* `apc docker run my-store-2 --image tbeets/my-store --routes http://my-store-2.ace.tinghus.net --port 5000`
+* `apc app show my-store-2` (note hard tag)
 
